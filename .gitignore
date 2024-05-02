@@ -1,0 +1,65 @@
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Serverless directories
+.serverless
+# Node.js
+node_modules/
+npm-debug.log
+
+database.ini
+
+test.py
+
+README.md
+python
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Serverless
+.serverless/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Virtual Environment
+venv/
+
+# Dependency directories
+pandas/
+
+# Serverless dependencies
+.env
+.serverless/
+.env.local
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment variables file
+.env
+credentials.py

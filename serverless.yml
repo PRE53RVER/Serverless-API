@@ -1,0 +1,55 @@
+service: AWS-python-db
+frameworkVersion: '3'
+
+package:
+  exclude:
+    - '**/*'
+  include:
+    - '*.py'
+    - 'psycopg2'
+
+provider:
+  name: aws
+  runtime: python3.9
+  region: us-east-1
+
+functions:
+    
+  create_user:
+    handler: handler.create_user  
+    events:
+      - httpApi:
+          path: /create_user
+          method: post
+    layers:
+      - arn:aws:lambda:us-east-1:381492153391:layer:pycopg:1
+
+  get_users:
+    handler: handler.get_users
+    events:
+      - httpApi:
+          path: /get_users
+          method: post
+    layers:
+      - arn:aws:lambda:us-east-1:381492153391:layer:pycopg:1
+
+  delete_user:
+    handler: handler.delete_user
+    events:
+      - httpApi:
+          path: /delete_user
+          method: post
+    layers:
+      - arn:aws:lambda:us-east-1:381492153391:layer:pycopg:1
+
+  update_user:
+    handler: handler.update_user
+    events:
+      - httpApi:
+          path: /update_user
+          method: post
+    layers:
+      - arn:aws:lambda:us-east-1:381492153391:layer:pycopg:1
+
+plugins:
+   - serverless-python-requirements
