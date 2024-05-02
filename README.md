@@ -5,6 +5,7 @@ Welcome to the Serverless Functions API documentation. This API enables CRUD ope
 ## Prerequisites
 1. **Cloud Account**: Create a free tier account on your preferred cloud provider. We recommend AWS with Lambda and RDS (PostgreSQL) services.
 2. **Access Setup**: Ensure access to serverless functions and set up a PostgreSQL database.
+3. **AWS Layers**: Follow the instructions in the [AWS Lambda documentation](https://docs.aws.amazon.com/lambda/latest/dg/chapter-layers.html) to create and attach layers, allowing you to efficiently share code and resources across multiple Lambda functions.
 
 ## Endpoints
 ### Create User: POST - /create_user
