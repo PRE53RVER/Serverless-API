@@ -62,4 +62,4 @@ pandas/
 
 # Environment variables file
 .env
-credentials.py
+config.py
